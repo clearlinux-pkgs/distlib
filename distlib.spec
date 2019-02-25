@@ -4,12 +4,12 @@
 #
 Name     : distlib
 Version  : 0.2.8
-Release  : 1
+Release  : 2
 URL      : https://bitbucket.org/pypa/distlib/downloads/distlib-0.2.8.zip
 Source0  : https://bitbucket.org/pypa/distlib/downloads/distlib-0.2.8.zip
 Summary  : Distribution utilities
 Group    : Development/Tools
-License  : Python-2.0 ZPL-2.0
+License  : HPND Python-2.0 ZPL-2.0
 Requires: distlib-license = %{version}-%{release}
 Requires: distlib-python = %{version}-%{release}
 Requires: distlib-python3 = %{version}-%{release}
@@ -54,7 +54,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1551107148
+export SOURCE_DATE_EPOCH=1551109631
 export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
 
@@ -62,6 +62,8 @@ python3 setup.py build
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/distlib
 cp LICENSE.txt %{buildroot}/usr/share/package-licenses/distlib/LICENSE.txt
+cp tests/test_testdist-0.1/LICENSE %{buildroot}/usr/share/package-licenses/distlib/tests_test_testdist-0.1_LICENSE
+cp tests/testdist-0.1/LICENSE %{buildroot}/usr/share/package-licenses/distlib/tests_testdist-0.1_LICENSE
 python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
@@ -73,6 +75,8 @@ echo ----[ mark ]----
 %files license
 %defattr(0644,root,root,0755)
 /usr/share/package-licenses/distlib/LICENSE.txt
+/usr/share/package-licenses/distlib/tests_test_testdist-0.1_LICENSE
+/usr/share/package-licenses/distlib/tests_testdist-0.1_LICENSE
 
 %files python
 %defattr(-,root,root,-)
