@@ -4,7 +4,7 @@
 #
 Name     : distlib
 Version  : 0.2.9
-Release  : 4
+Release  : 5
 URL      : https://bitbucket.org/pypa/distlib/downloads/distlib-0.2.9.zip
 Source0  : https://bitbucket.org/pypa/distlib/downloads/distlib-0.2.9.zip
 Summary  : Distribution utilities
