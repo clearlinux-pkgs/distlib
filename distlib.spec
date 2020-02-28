@@ -6,7 +6,7 @@
 #
 Name     : distlib
 Version  : 0.3.0
-Release  : 8
+Release  : 9
 URL      : https://files.pythonhosted.org/packages/7d/29/694a3a4d7c0e1aef76092e9167fbe372e0f7da055f5dcf4e1313ec21d96a/distlib-0.3.0.zip
 Source0  : https://files.pythonhosted.org/packages/7d/29/694a3a4d7c0e1aef76092e9167fbe372e0f7da055f5dcf4e1313ec21d96a/distlib-0.3.0.zip
 Source1  : https://files.pythonhosted.org/packages/7d/29/694a3a4d7c0e1aef76092e9167fbe372e0f7da055f5dcf4e1313ec21d96a/distlib-0.3.0.zip.asc
@@ -19,8 +19,7 @@ Requires: distlib-python3 = %{version}-%{release}
 BuildRequires : buildreq-distutils3
 
 %description
-.. image:: https://travis-ci.org/vsajip/distlib.svg
-:target: https://travis-ci.org/vsajip/distlib
+Low-level components of distutils2/packaging, augmented with higher-level APIs for making packaging easier.
 
 %package license
 Summary: license components for the distlib package.
@@ -43,6 +42,7 @@ python components for the distlib package.
 Summary: python3 components for the distlib package.
 Group: Default
 Requires: python3-core
+Provides: pypi(distlib)
 
 %description python3
 python3 components for the distlib package.
@@ -57,7 +57,8 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1581464349
+export SOURCE_DATE_EPOCH=1582917099
+# -Werror is for werrorists
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
