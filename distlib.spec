@@ -6,7 +6,7 @@
 #
 Name     : distlib
 Version  : 0.3.1
-Release  : 11
+Release  : 12
 URL      : https://files.pythonhosted.org/packages/2f/83/1eba07997b8ba58d92b3e51445d5bf36f9fba9cb8166bcae99b9c3464841/distlib-0.3.1.zip
 Source0  : https://files.pythonhosted.org/packages/2f/83/1eba07997b8ba58d92b3e51445d5bf36f9fba9cb8166bcae99b9c3464841/distlib-0.3.1.zip
 Source1  : https://files.pythonhosted.org/packages/2f/83/1eba07997b8ba58d92b3e51445d5bf36f9fba9cb8166bcae99b9c3464841/distlib-0.3.1.zip.asc
@@ -43,6 +43,7 @@ python components for the distlib package.
 Summary: python3 components for the distlib package.
 Group: Default
 Requires: python3-core
+Provides: pypi(distlib)
 
 %description python3
 python3 components for the distlib package.
@@ -57,7 +58,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1593452752
+export SOURCE_DATE_EPOCH=1594144347
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
