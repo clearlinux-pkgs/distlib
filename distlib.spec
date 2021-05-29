@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x9147B477339A9B86 (vinay_sajip@yahoo.co.uk)
 #
 Name     : distlib
-Version  : 0.3.1
-Release  : 20
-URL      : https://files.pythonhosted.org/packages/2f/83/1eba07997b8ba58d92b3e51445d5bf36f9fba9cb8166bcae99b9c3464841/distlib-0.3.1.zip
-Source0  : https://files.pythonhosted.org/packages/2f/83/1eba07997b8ba58d92b3e51445d5bf36f9fba9cb8166bcae99b9c3464841/distlib-0.3.1.zip
-Source1  : https://files.pythonhosted.org/packages/2f/83/1eba07997b8ba58d92b3e51445d5bf36f9fba9cb8166bcae99b9c3464841/distlib-0.3.1.zip.asc
+Version  : 0.3.2
+Release  : 21
+URL      : https://files.pythonhosted.org/packages/45/97/15fdbef466e12c890553cebb1d8b1995375202e30e0c83a1e51061556143/distlib-0.3.2.zip
+Source0  : https://files.pythonhosted.org/packages/45/97/15fdbef466e12c890553cebb1d8b1995375202e30e0c83a1e51061556143/distlib-0.3.2.zip
+Source1  : https://files.pythonhosted.org/packages/45/97/15fdbef466e12c890553cebb1d8b1995375202e30e0c83a1e51061556143/distlib-0.3.2.zip.asc
 Summary  : Distribution utilities
 Group    : Development/Tools
 License  : HPND Python-2.0
@@ -50,15 +50,15 @@ python3 components for the distlib package.
 
 
 %prep
-%setup -q -n distlib-0.3.1
-cd %{_builddir}/distlib-0.3.1
+%setup -q -n distlib-0.3.2
+cd %{_builddir}/distlib-0.3.2
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1594144347
+export SOURCE_DATE_EPOCH=1622302536
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -74,9 +74,9 @@ python3 setup.py build
 export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/distlib
-cp %{_builddir}/distlib-0.3.1/LICENSE.txt %{buildroot}/usr/share/package-licenses/distlib/79c85e153df486fd6c05a2f7359e1ff6dc288867
-cp %{_builddir}/distlib-0.3.1/tests/test_testdist-0.1/LICENSE %{buildroot}/usr/share/package-licenses/distlib/71ff42eed070086a7e794fdab6a1c16495923820
-cp %{_builddir}/distlib-0.3.1/tests/testdist-0.1/LICENSE %{buildroot}/usr/share/package-licenses/distlib/71ff42eed070086a7e794fdab6a1c16495923820
+cp %{_builddir}/distlib-0.3.2/LICENSE.txt %{buildroot}/usr/share/package-licenses/distlib/79c85e153df486fd6c05a2f7359e1ff6dc288867
+cp %{_builddir}/distlib-0.3.2/tests/test_testdist-0.1/LICENSE %{buildroot}/usr/share/package-licenses/distlib/71ff42eed070086a7e794fdab6a1c16495923820
+cp %{_builddir}/distlib-0.3.2/tests/testdist-0.1/LICENSE %{buildroot}/usr/share/package-licenses/distlib/71ff42eed070086a7e794fdab6a1c16495923820
 python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
