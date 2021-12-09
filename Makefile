@@ -1,5 +1,5 @@
 PKG_NAME := distlib
-URL = https://files.pythonhosted.org/packages/56/ed/9c876a62efda9901863e2cc8825a13a7fcbda75b4b498103a4286ab1653b/distlib-0.3.3.zip
+URL = https://files.pythonhosted.org/packages/85/01/88529c93e41607f1a78c1e4b346b24c74ee43d2f41cfe33ecd2e20e0c7e3/distlib-0.3.4.zip
 ARCHIVES = 
 
 include ../common/Makefile.common
